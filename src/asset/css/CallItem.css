@@ -96,6 +96,23 @@
   border-bottom-left-radius: 5px;
 }
 
+.call-item-root .call-item-detail {
+  align-items: center;
+  margin: 10px 0;
+}
+
+.call-item-root .call-item-detail .call-item-detail-item {
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333;
+}
+
+.call-item-root .call-item-detail .call-item-detail-item i {
+  margin-right: 10px;
+}
+
 .call-item-archive {
   padding: 20px 0 0 0;
   text-align: center;

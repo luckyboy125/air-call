@@ -31,12 +31,28 @@ const CallItem = () => {
           </div>
         </div>
         {archive ? (
-          <div className="call-item-archive" onClick={handlArchive}>
-            <span>
-              <i className="fal fa-archive"></i>
-              Archive this call
-            </span>
-          </div>
+          <>
+            <div className="call-item-detail">
+              <div className="call-item-detail-item">
+                <i className="far fa-user"></i>: Xavier Durand
+              </div>
+              <div className="call-item-detail-item">
+                <i className="far fa-phone"></i>: Missed
+              </div>
+              <div className="call-item-detail-item">
+                <i className="far fa-phone-office"></i>: Support FR
+              </div>
+              <div className="call-item-detail-item">
+                <i className="fas fa-history"></i>: 3mins
+              </div>
+            </div>
+            <div className="call-item-archive" onClick={handlArchive}>
+              <span>
+                <i className="fal fa-archive"></i>
+                Archive this call
+              </span>
+            </div>
+          </>
         ) : (
           <></>
         )}

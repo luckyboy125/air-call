@@ -57,9 +57,3 @@ header .tab .tab-item-selected {
   font-weight: 600;
   border-bottom: 3px solid #ff6600;
 }
-
-header .tab .div-line {
-  width: 1px;
-  height: 20px;
-  border-left: 1px dotted #d1d1d1;
-}
