@@ -2,7 +2,8 @@ header {
   margin: 0 auto;
   padding: 0 0 0 20px;
   text-align: center;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 1px 0 #a592921a;
   display: flex;
   align-items: center;
 }

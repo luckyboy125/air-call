@@ -3,13 +3,9 @@
   height: 666px;
   z-index: 100;
   margin: auto;
-  background: white;
+  background: #ededed;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
-}
-
-#root .container-view {
-  padding: 20px;
 }
 
 html,
@@ -32,4 +28,95 @@ body {
   font-size: 13px;
   color: #333333;
   line-height: 1;
+}
+
+#root .container-view {
+  padding: 0 20px;
+}
+
+.select-all-archive {
+  border-left: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.select-all-archive span {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+}
+
+.select-all-archive span i {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.call-item-divline {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.call-item-divline span {
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #333;
+  white-space: nowrap;
+}
+
+.call-dottedline {
+  width: 100%;
+  border: none;
+  border-top: 1px dotted #d1d1d1;
+  height: 1px;
+}
+
+.call-item {
+  padding: 20px 0 20px 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.call-item .first-part {
+  display: flex;
+  align-items: center;
+}
+
+.call-item .phone-number {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+  font-weight: 600;
+}
+
+.call-item .phone-des {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+  opacity: 0.7;
+}
+
+.phone-icon {
+  font-size: 20px;
+  line-height: 20px;
+  color: #333333;
+  position: relative;
+  margin-right: 20px;
+}
+
+.phone-icon .status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  line-height: 10px;
+  color: red;
 }
