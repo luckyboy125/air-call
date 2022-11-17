@@ -1,6 +1,8 @@
 {
-  "name": "my-app",
+  "name": "frontend-hiring-challenge",
   "version": "0.1.0",
+  "description": "Leap test",
+  "author": "Jack Miller",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
