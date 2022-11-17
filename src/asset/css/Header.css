@@ -61,5 +61,5 @@ header .tab .tab-item-selected {
 header .tab .div-line {
   width: 1px;
   height: 20px;
-  background-color: #d1d1d1;
+  border-left: 1px dotted #d1d1d1;
 }
