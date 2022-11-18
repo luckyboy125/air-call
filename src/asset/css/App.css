@@ -1,6 +1,5 @@
 #root .container {
   width: 376px;
-  height: 666px;
   z-index: 100;
   margin: auto;
   background: #ededed;
@@ -61,4 +60,12 @@ body {
   width: 1px;
   height: 20px;
   border-left: 1px dotted #d1d1d1;
+}
+
+.color-green {
+  color: #09ff09;
+}
+
+.color-red {
+  color: red;
 }
