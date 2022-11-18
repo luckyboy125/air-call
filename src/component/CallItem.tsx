@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { callDirectionType, callType } from "../const/const";
-import { dateConvert } from "../const/utils";
+import { callDirectionType, callType } from "../config/const";
+import { dateConvert } from "../config/utils";
 
 interface callitemprops {
   time: string;

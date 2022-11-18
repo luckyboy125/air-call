@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CallItem from "../component/CallItem";
-import { callDirectionType } from "../const/const";
+import { callDirectionType } from "../config/const";
 
 interface dataType {
   id: number;

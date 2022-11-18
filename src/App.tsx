@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { tabIndex } from "./const/const";
+import { tabIndex } from "./config/const";
 import Archive from "./container/Archive";
 import CallHistory from "./container/CallHistory";
 
