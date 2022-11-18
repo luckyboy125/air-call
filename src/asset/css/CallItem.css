@@ -1,0 +1,159 @@
+.call-item-divline {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.call-item-divline span {
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #333;
+  white-space: nowrap;
+}
+
+.call-dottedline {
+  width: 100%;
+  border: none;
+  border-top: 1px dotted #d1d1d1;
+  height: 1px;
+}
+
+.call-item-root {
+  cursor: pointer;
+  padding: 20px 0 20px 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+}
+
+.call-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.call-item .first-part {
+  display: flex;
+  align-items: center;
+}
+
+.call-item .phone-number {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+  font-weight: 600;
+}
+
+.call-item .phone-des {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+  opacity: 0.7;
+}
+
+.phone-icon {
+  font-size: 20px;
+  line-height: 20px;
+  color: #333333;
+  position: relative;
+  margin-right: 20px;
+}
+
+.phone-icon .inbound {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.phone-icon .outbound {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  line-height: 10px;
+  transform: rotate(180deg);
+}
+
+.call-item .last-part {
+  border-left: 1px dotted #d1d1d1;
+  display: flex;
+  padding-left: 10px;
+}
+
+.call-item .last-part .call-date {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+  opacity: 0.7;
+  margin-right: 5px;
+}
+
+.call-item .last-part .call-date-state {
+  font-size: 10px;
+  padding: 3px;
+  font-family: Montserrat;
+  color: #333;
+  border-left: 1px solid #d1d1d1b9;
+  border-top: 1px solid #d1d1d1b9;
+  border-bottom: 1px solid #d1d1d1b9;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.call-item-root .call-item-detail {
+  align-items: center;
+  margin: 10px 0;
+  animation: 0.5s ease-out fadeIn 1;
+}
+
+.call-item-root .call-item-detail .call-item-detail-item {
+  padding: 10px;
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333;
+}
+
+.call-item-root .call-item-detail .call-item-detail-item i {
+  margin-right: 10px;
+}
+
+.call-item-archive {
+  padding: 20px 0 0 0;
+  text-align: center;
+  transition: all 1s;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}
+
+.call-item-archive:hover span i {
+  margin-right: 20px;
+  transition: all 1s;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}
+
+.call-item-archive span {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+}
+
+.call-item-archive span i {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #333333;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50px);
+    transform-origin: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

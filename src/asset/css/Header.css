@@ -1,0 +1,78 @@
+header {
+  margin: 0 auto;
+  padding: 0 0 0 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 1px 0 #a592921a;
+  display: flex;
+  align-items: center;
+}
+
+header svg {
+  display: block;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+header .tab {
+  background-color: #ededed;
+  padding: 0 30px;
+  height: 50px;
+  margin-top: 3px;
+  margin-left: 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(
+    7% 35%,
+    8% 24%,
+    9% 15%,
+    11% 6%,
+    14% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    2% 94%,
+    3% 85%,
+    4% 73%,
+    5% 60%,
+    6% 48%
+  );
+}
+
+header .tab .tab-item {
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 16px;
+  margin: 0 20px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+header .tab .tab-item:hover {
+  opacity: 0.7;
+  transition: all 1s;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}
+
+header .tab .tab-item-selected {
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 16px;
+  margin: 0 20px;
+  font-weight: 600;
+  border-bottom: 3px solid #ff6600;
+}
+
+header .tab-reset {
+  cursor: pointer;
+}
+
+header .tab-reset:hover {
+  transform: rotate(-45deg);
+  transition: all 1s;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}

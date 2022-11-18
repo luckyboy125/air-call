@@ -1,0 +1,78 @@
+#root .container {
+  width: 376px;
+  min-height: 100vh;
+  z-index: 100;
+  margin: auto;
+  background: #ededed;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+body {
+  background: #233142;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1;
+}
+
+#root .container-view {
+  padding: 0 20px;
+}
+
+.div-line {
+  width: 1px;
+  height: 20px;
+  border-left: 1px dotted #d1d1d1;
+}
+
+.color-green {
+  color: #09ff09;
+}
+
+.color-red {
+  color: red;
+}
+
+.nodata {
+  font-size: 20px;
+  font-family: Montserrat;
+  color: #333;
+  margin: auto;
+  padding: 50px;
+  width: fit-content;
+}
+
+.display-none {
+  display: none;
+}
+
+*::-webkit-scrollbar {
+  width: 5px !important;
+  height: 6px;
+  background: #fff;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}

@@ -1,0 +1,29 @@
+.select-all {
+  cursor: pointer;
+  border-left: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.select-all:hover span i {
+  margin-right: 20px;
+  transition: all 1s;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}
+
+.select-all span {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #333333;
+}
+
+.select-all span i {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #333333;
+}
