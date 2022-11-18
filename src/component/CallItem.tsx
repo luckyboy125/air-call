@@ -11,6 +11,7 @@ interface callitemprops {
   duration: number;
   call_type: string;
   direction: string;
+  btnLetter: string;
   onAction: (e: number) => void;
 }
 
@@ -23,6 +24,7 @@ const CallItem = ({
   duration,
   call_type,
   direction,
+  btnLetter,
   onAction,
 }: callitemprops) => {
   const [archive, setArchive] = useState(false);
@@ -87,7 +89,7 @@ const CallItem = ({
             <div className="call-item-archive" onClick={handlAction}>
               <span>
                 <i className="fal fa-archive"></i>
-                Archive this call
+                {btnLetter} this call
               </span>
             </div>
           </>

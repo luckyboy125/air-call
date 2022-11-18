@@ -35,6 +35,7 @@ const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
             call_type={item.call_type}
             direction={item.direction}
             onAction={(e) => handleArchive(e)}
+            btnLetter="Archive"
           />
         ) : (
           <></>

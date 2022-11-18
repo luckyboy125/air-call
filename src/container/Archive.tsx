@@ -28,6 +28,7 @@ const Archive = ({ data, onUnArchive }: ArchiveProps) => {
             call_type={item.call_type}
             direction={item.direction}
             onAction={(e) => handleArchive(e)}
+            btnLetter="Undo Archive"
           />
         ) : (
           <></>
