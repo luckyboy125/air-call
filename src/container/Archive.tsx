@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CallItem from "../component/CallItem";
 import { callDirectionType } from "../config/const";
 
@@ -8,6 +9,7 @@ interface ArchiveProps {
 }
 
 const Archive = ({ data, onAllSelect, onUnArchive }: ArchiveProps) => {
+  const [select, setSelect] = useState(0);
   const handleArchive = (id: number) => {
     onUnArchive(id);
   };
@@ -42,6 +44,8 @@ const Archive = ({ data, onAllSelect, onUnArchive }: ArchiveProps) => {
             direction={item.direction}
             onAction={(e) => handleArchive(e)}
             btnLetter="Undo Archive"
+            onRoot={(e) => setSelect(e)}
+            select={select}
           />
         ) : (
           <></>

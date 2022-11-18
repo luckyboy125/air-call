@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { callDirectionType, callType } from "../config/const";
 import { dateConvert } from "../config/utils";
 
@@ -13,6 +13,8 @@ interface callitemprops {
   direction: string;
   btnLetter: string;
   onAction: (e: number) => void;
+  onRoot: (e: number) => void;
+  select: number;
 }
 
 const CallItem = ({
@@ -26,9 +28,12 @@ const CallItem = ({
   direction,
   btnLetter,
   onAction,
+  onRoot,
+  select,
 }: callitemprops) => {
   const [archive, setArchive] = useState(false);
-  const handleClick = () => {
+  const handleClick = (e: number) => {
+    onRoot(e);
     setArchive(!archive);
   };
 
@@ -38,6 +43,10 @@ const CallItem = ({
     onAction(id);
   };
 
+  useEffect(() => {
+    select !== id && setArchive(false);
+  }, [select]);
+
   return (
     <>
       <div className="call-item-divline">
@@ -45,7 +54,7 @@ const CallItem = ({
         <span>{timeData.date}</span>
         <div className="call-dottedline"></div>
       </div>
-      <div className="call-item-root" onClick={handleClick}>
+      <div className="call-item-root" onClick={() => handleClick(id)}>
         <div className="call-item">
           <div className="first-part">
             <i className="fas fa-phone-alt phone-icon">

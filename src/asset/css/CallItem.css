@@ -23,9 +23,6 @@
   margin: 0 20px;
   border-radius: 10px;
   border: 1px solid #d1d1d1;
-  transition: all 1s;
-  transition-delay: 100ms;
-  transition-duration: 300ms;
 }
 
 .call-item {
@@ -107,6 +104,7 @@
 .call-item-root .call-item-detail {
   align-items: center;
   margin: 10px 0;
+  animation: 0.5s ease-out fadeIn 1;
 }
 
 .call-item-root .call-item-detail .call-item-detail-item {
@@ -140,8 +138,22 @@
   font-family: Montserrat;
   color: #333333;
 }
+
 .call-item-archive span i {
   margin-right: 10px;
   font-weight: 600;
   color: #333333;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50px);
+    transform-origin: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }

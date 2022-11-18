@@ -1,6 +1,5 @@
 import { useState } from "react";
-import CallItem from "../component/CallItem";
-import { callDirectionType, tabIndex } from "../config/const";
+import { tabIndex } from "../config/const";
 
 interface HeaderProps {
   onTab: (e: string) => void;
@@ -9,6 +8,10 @@ interface HeaderProps {
 
 const Header = ({ onTab, onReset }: HeaderProps) => {
   const [tab, setTab] = useState<string>(tabIndex.all);
+
+  const handleRefresh = () => {
+    window.location.reload();
+  };
 
   const handleTab = (index: string) => {
     onTab(index);
@@ -24,7 +27,7 @@ const Header = ({ onTab, onReset }: HeaderProps) => {
           viewBox="0 0 486 168"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
-          onClick={onReset}
+          onClick={handleRefresh}
         >
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(207.000000, 24.000000)">

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CallItem from "../component/CallItem";
 import { callDirectionType } from "../config/const";
 
@@ -8,6 +9,7 @@ interface CallHistoryProps {
 }
 
 const CallHistory = ({ data, onArchive, onAllSelect }: CallHistoryProps) => {
+  const [select, setSelect] = useState(0);
   const handleArchive = (id: number) => {
     onArchive(id);
   };
@@ -42,6 +44,8 @@ const CallHistory = ({ data, onArchive, onAllSelect }: CallHistoryProps) => {
             direction={item.direction}
             onAction={(e) => handleArchive(e)}
             btnLetter="Archive"
+            onRoot={(e) => setSelect(e)}
+            select={select}
           />
         );
       })}
