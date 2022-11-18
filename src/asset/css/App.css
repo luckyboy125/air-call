@@ -86,3 +86,7 @@ body {
   padding: 50px;
   width: fit-content;
 }
+
+.display-none {
+  display: none;
+}
