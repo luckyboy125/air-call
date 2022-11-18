@@ -4,9 +4,10 @@ import { callDirectionType, tabIndex } from "../config/const";
 
 interface HeaderProps {
   onTab: (e: string) => void;
+  onReset: () => void;
 }
 
-const Header = ({ onTab }: HeaderProps) => {
+const Header = ({ onTab, onReset }: HeaderProps) => {
   const [tab, setTab] = useState<string>(tabIndex.all);
 
   const handleTab = (index: string) => {
@@ -23,6 +24,7 @@ const Header = ({ onTab }: HeaderProps) => {
           viewBox="0 0 486 168"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={onReset}
         >
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(207.000000, 24.000000)">
@@ -88,6 +90,9 @@ const Header = ({ onTab }: HeaderProps) => {
             onClick={() => handleTab(tabIndex.archive)}
           >
             <p>Archive</p>
+          </div>
+          <div className="tab-reset" onClick={onReset}>
+            <i className="fas fa-undo"></i>
           </div>
         </div>
       </header>

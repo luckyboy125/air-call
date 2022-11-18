@@ -3,10 +3,11 @@ import { callDirectionType } from "../config/const";
 
 interface ArchiveProps {
   data: dataType[];
+  onAllSelect: () => void;
   onUnArchive: (e: number) => void;
 }
 
-const Archive = ({ data, onUnArchive }: ArchiveProps) => {
+const Archive = ({ data, onAllSelect, onUnArchive }: ArchiveProps) => {
   const handleArchive = (id: number) => {
     onUnArchive(id);
   };
@@ -19,6 +20,12 @@ const Archive = ({ data, onUnArchive }: ArchiveProps) => {
     <div className="nodata">There is no Archive call.</div>
   ) : (
     <>
+      <div className="select-all" onClick={onAllSelect}>
+        <span>
+          <i className="fal fa-archive"></i>
+          Undo Archive all calls
+        </span>
+      </div>
       {data?.map((item: dataType) => {
         return item.is_archived ? (
           <CallItem

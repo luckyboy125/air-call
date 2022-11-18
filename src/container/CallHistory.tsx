@@ -4,10 +4,10 @@ import { callDirectionType } from "../config/const";
 interface CallHistoryProps {
   data: dataType[];
   onArchive: (e: number) => void;
-  onReset: () => void;
+  onAllSelect: () => void;
 }
 
-const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
+const CallHistory = ({ data, onArchive, onAllSelect }: CallHistoryProps) => {
   const handleArchive = (id: number) => {
     onArchive(id);
   };
@@ -20,7 +20,7 @@ const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
     <div className="nodata">There is no call.</div>
   ) : (
     <>
-      <div className="select-all-archive" onClick={onReset}>
+      <div className="select-all" onClick={onAllSelect}>
         <span>
           <i className="fal fa-archive"></i>
           Archive all calls
