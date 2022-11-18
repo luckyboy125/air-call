@@ -77,3 +77,12 @@ body {
 .color-red {
   color: red;
 }
+
+.nodata {
+  font-size: 20px;
+  font-family: Montserrat;
+  color: #333;
+  margin: auto;
+  padding: 50px;
+  width: fit-content;
+}

@@ -12,7 +12,13 @@ const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
     onArchive(id);
   };
 
-  return (
+  const unArchiveData = data.filter((item: dataType) => {
+    return !item.is_archived;
+  });
+
+  return unArchiveData.length === 0 ? (
+    <div className="nodata">There is no call.</div>
+  ) : (
     <>
       <div className="select-all-archive" onClick={onReset}>
         <span>
@@ -20,8 +26,8 @@ const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
           Archive all calls
         </span>
       </div>
-      {data?.map((item: dataType) => {
-        return !item.is_archived ? (
+      {unArchiveData?.map((item: dataType) => {
+        return (
           <CallItem
             key={item.id}
             id={item.id}
@@ -37,8 +43,6 @@ const CallHistory = ({ data, onArchive, onReset }: CallHistoryProps) => {
             onAction={(e) => handleArchive(e)}
             btnLetter="Archive"
           />
-        ) : (
-          <></>
         );
       })}
     </>

@@ -11,7 +11,13 @@ const Archive = ({ data, onUnArchive }: ArchiveProps) => {
     onUnArchive(id);
   };
 
-  return (
+  const ArchiveData = data.filter((item: dataType) => {
+    return item.is_archived;
+  });
+
+  return ArchiveData.length === 0 ? (
+    <div className="nodata">There is no Archive call.</div>
+  ) : (
     <>
       {data?.map((item: dataType) => {
         return item.is_archived ? (

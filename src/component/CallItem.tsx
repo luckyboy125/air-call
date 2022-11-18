@@ -35,7 +35,6 @@ const CallItem = ({
   const timeData = dateConvert(new Date(time).getTime() / 1000);
 
   const handlAction = () => {
-    console.log("item id: ", id);
     onAction(id);
   };
 
