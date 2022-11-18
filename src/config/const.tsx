@@ -13,3 +13,5 @@ export const callType = {
   answer: "answered",
   voicemail: "voicemail",
 };
+
+export const apiUrl = "https://aircall-job.herokuapp.com";

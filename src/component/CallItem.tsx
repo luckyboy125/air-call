@@ -3,6 +3,7 @@ import { callDirectionType, callType } from "../config/const";
 import { dateConvert } from "../config/utils";
 
 interface callitemprops {
+  id: number;
   time: string;
   phone: string;
   who: string;
@@ -10,9 +11,11 @@ interface callitemprops {
   duration: number;
   call_type: string;
   direction: string;
+  onAction: (e: number) => void;
 }
 
 const CallItem = ({
+  id,
   time,
   phone,
   who,
@@ -20,6 +23,7 @@ const CallItem = ({
   duration,
   call_type,
   direction,
+  onAction,
 }: callitemprops) => {
   const [archive, setArchive] = useState(false);
   const handleClick = () => {
@@ -28,7 +32,10 @@ const CallItem = ({
 
   const timeData = dateConvert(new Date(time).getTime() / 1000);
 
-  const handlArchive = () => {};
+  const handlAction = () => {
+    console.log("item id: ", id);
+    onAction(id);
+  };
 
   return (
     <>
@@ -77,7 +84,7 @@ const CallItem = ({
                 <i className="fas fa-history"></i>: {duration}
               </div>
             </div>
-            <div className="call-item-archive" onClick={handlArchive}>
+            <div className="call-item-archive" onClick={handlAction}>
               <span>
                 <i className="fal fa-archive"></i>
                 Archive this call
