@@ -91,7 +91,7 @@ const CallItem = ({
                 <i className="far fa-phone-office"></i>: {via}
               </div>
               <div className="call-item-detail-item">
-                <i className="fas fa-history"></i>: {duration}
+                <i className="fas fa-history"></i>: {duration / 60}mins
               </div>
             </div>
             <div className="call-item-archive" onClick={handlAction}>
